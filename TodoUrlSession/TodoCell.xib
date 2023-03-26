@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoCell" rowHeight="168" id="4jw-KS-BJp" customClass="TodoCell" customModule="TodoUrlSession" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="168"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4jw-KS-BJp" id="TfM-SX-bnB" customClass="TodoCell" customModule="TodoUrlSession" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="422" height="168"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="todoID: 01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWe-cf-7nd">
+                        <rect key="frame" x="20" y="9.9999999999999982" width="77.666666666666671" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="할일 내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbJ-rK-AUn">
+                        <rect key="frame" x="20" y="60.333333333333336" width="172" height="20.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3mw-by-Hbx">
+                        <rect key="frame" x="292" y="10" width="120" height="34.333333333333336"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kx-Zz-cN8">
+                                <rect key="frame" x="0.0" y="0.0" width="59" height="34.333333333333336"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="수정"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjp-pM-v9c">
+                                <rect key="frame" x="61" y="0.0" width="59" height="34.333333333333336"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="삭제">
+                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="cix-Pz-OXC"/>
+                        </constraints>
+                    </stackView>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cpe-T2-JYO">
+                        <rect key="frame" x="363" y="84.333333333333329" width="51" height="31"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FWe-cf-7nd" firstAttribute="top" secondItem="TfM-SX-bnB" secondAttribute="top" constant="10" id="N6g-It-l2F"/>
+                    <constraint firstItem="Cpe-T2-JYO" firstAttribute="trailing" secondItem="3mw-by-Hbx" secondAttribute="trailing" id="NrO-ec-uSU"/>
+                    <constraint firstItem="FWe-cf-7nd" firstAttribute="leading" secondItem="TfM-SX-bnB" secondAttribute="leading" constant="20" symbolic="YES" id="Ob5-Yi-1Ux"/>
+                    <constraint firstItem="MbJ-rK-AUn" firstAttribute="leading" secondItem="FWe-cf-7nd" secondAttribute="leading" id="Ora-Qr-eAb"/>
+                    <constraint firstItem="3mw-by-Hbx" firstAttribute="top" secondItem="FWe-cf-7nd" secondAttribute="top" id="PfF-me-Z7X"/>
+                    <constraint firstAttribute="trailing" secondItem="3mw-by-Hbx" secondAttribute="trailing" constant="10" id="Pfx-99-VYM"/>
+                    <constraint firstItem="8kx-Zz-cN8" firstAttribute="leading" secondItem="MbJ-rK-AUn" secondAttribute="trailing" constant="100" id="XKp-hH-lGe"/>
+                    <constraint firstItem="Cpe-T2-JYO" firstAttribute="top" secondItem="3mw-by-Hbx" secondAttribute="bottom" constant="40" id="byV-Zi-Wpg"/>
+                    <constraint firstItem="MbJ-rK-AUn" firstAttribute="top" secondItem="FWe-cf-7nd" secondAttribute="bottom" constant="30" id="tgG-jP-4PB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="deleteBtn" destination="Wjp-pM-v9c" id="RmG-gp-z9r"/>
+                <outlet property="editBtn" destination="8kx-Zz-cN8" id="mHm-rC-Cxu"/>
+                <outlet property="selectedSwitch" destination="Cpe-T2-JYO" id="Lrb-0R-RRO"/>
+                <outlet property="todoContent" destination="MbJ-rK-AUn" id="8Gs-54-DbL"/>
+                <outlet property="todoId" destination="FWe-cf-7nd" id="f6E-On-xXT"/>
+            </connections>
+            <point key="canvasLocation" x="182" y="-23"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
